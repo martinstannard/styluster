@@ -9,10 +9,16 @@ iex(1)>  {:ok, ack} = Exq.enqueue(:exq, "default", "Events", [])
 {:ok, "c89173ea-86c8-4f1a-b48b-e3f43d9ba506"}
 ```
 
-To send multiple events:
+To enqueue multiple events:
 
 ```
-Trickle.squirt(1000)
+Styluster.flood(count)
+```
+
+To enqueue multiple events for processing later:
+
+```
+Styluster.flood_later(count, time_in_seconds)
 ```
 
 To see pretty graph:
