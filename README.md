@@ -1,6 +1,13 @@
 # Styluster
 
-**TODO: Add description**
+A test for exq
+
+```
+mix deps.get
+iex -S mix
+iex(1)>  {:ok, ack} = Exq.enqueue(:exq, "default", "Events", []) 
+{:ok, "c89173ea-86c8-4f1a-b48b-e3f43d9ba506"}
+```
 
 ## Installation
 
