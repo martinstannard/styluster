@@ -5,7 +5,7 @@ defmodule Styluster do
 
   def flood(count) do
     1..count 
-    |> Enum.each(fn(index) -> send(index) end)
+    |> Enum.each( fn(index) -> spawn( fn -> send(index) end) end)
   end
 
   def send(id) do
