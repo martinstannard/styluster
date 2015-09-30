@@ -2,8 +2,8 @@ require Logger
 
 defmodule Events do
 
-  def perform do
-    Logger.info "Events perform"
+  def perform(id) do
+    Logger.info "Events perform #{id}"
   end
 
 end
