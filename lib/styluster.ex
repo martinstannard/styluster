@@ -1,0 +1,2 @@
+defmodule Styluster do
+end
