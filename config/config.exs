@@ -37,3 +37,9 @@ config :exq,
   poll_timeout: 50,
   scheduler_enable: true,
   scheduler_poll_timeout: 200
+
+config :styluster, Repo,
+  adapter: Ecto.Adapters.Postgres,
+  database: "ssa_dev",
+  username: "postgres",
+  hostname: "localhost"

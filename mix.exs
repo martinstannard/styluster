@@ -14,7 +14,8 @@ defmodule Styluster.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :exq, :tzdata]]
+    [applications: [:logger, :exq, :tzdata, :postgrex, :ecto],
+    mod: {Styluster, []}]
   end
 
   # Dependencies can be Hex packages:
@@ -27,6 +28,10 @@ defmodule Styluster.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:exq, github: "martinstannard/exq", branch: "master"}]
+    [
+      {:exq, github: "martinstannard/exq", branch: "master"},
+      {:postgrex, "~> 0.9.1"},
+      {:ecto, "~> 1.0"}
+    ]
   end
 end
